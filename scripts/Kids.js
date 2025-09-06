@@ -13,3 +13,10 @@ export const Kids = () => {
     return html
 }
 
+document.addEventListener("click", (clickEvent) => {
+    const clickedChild = clickEvent.target
+
+    if (clickedChild.dataset.type === "child") {
+        window.alert(`${clickedChild.innerText}'s wish is ${clickedChild.dataset.wish}`)
+    }
+})

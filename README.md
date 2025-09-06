@@ -35,10 +35,20 @@ Make sure your Developer Tools are open at all times while working on this proje
 Before you click the "Complete Assessment" button on the Learning Platform, add your answers below each question and make a commit.
 
 1. When a child is clicked on in the browser, which module contains the code that will execute on that event happening? Can you explain the algorithm of that logic?
-   > Your answer here
+
+   > Kids.js contains the code to process the click event that targets the child's name. I made it so that as long as the clicked target contains the data-type is "child" it will display the targets inner text (which is the child's name) and accesses the child's wish which is under data-wish (which is also grabbed from the clickEvent).
+
 2. In the **Pairings** module, why must the `findCelebrityMatch()` function be invoked inside the `for..of` loop that iterates the kids array?
-   > Your answer here
+
+   > The findCelebrityMatch() requires a singular kidObject from the entire kids array. Invoking it within the for loop allows for the proper argument for the function to accessed.
+
 3. In the **CelebrityList** module, can you describe how the name of the sport that the celebrity plays can be displayed in the window alert text?
-   > Your answer here
+
+   > Within the CelebrityList.js module, I accessed the celebrity's sport by targeting the data-sport from the clicked target. 
+
 4. Can you describe, in detail, the algorithm that is in the `main` module?
-   > Your answer here
+
+   > Short Version: The algorithm imports the functions responsible for generating the html and then invokes them, which updates what is displayed as the functions run.
+
+     Long Version: The mainContainer variable targets the id=container from index.html. We establish that the inner HTML of the main container will be whatever applicationHTML is. 
+     The function listed we created will dynamically display the html generated in Kids.js, CelebrityList.js, and  Pairings.js using the data from the database. 
